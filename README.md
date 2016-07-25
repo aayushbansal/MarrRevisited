@@ -23,7 +23,7 @@ Please cite our paper if you use this code for any publishable academic research
   title={Marr {R}evisited: 2{D}-3{D} Model Alignment via Surface Normal Prediction},
   author={Bansal, Aayush and Russell, Bryan and Gupta, Abhinav},
   booktitle={CVPR},
-  year={2016},
+  year={2016}
 }
 
 
