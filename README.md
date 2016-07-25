@@ -1,4 +1,4 @@
-# Surface Normal Estimation
+# Marr Revisited: 2D-3D Alignment via Surface Normal Prediction
 Created by Aayush Bansal, Bryan Russell, and Abhinav Gupta at CMU and Adobe Research.
 
 # Introduction 
