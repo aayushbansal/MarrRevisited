@@ -1,0 +1,14 @@
+net: "train_conv.prototxt"
+base_lr: 0.001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 50000
+display: 20
+max_iter: 500000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 10000
+snapshot_prefix: "tr_model_12345_conv_2"
+solver_mode: GPU
+device_id: 3
+test_initialization: false
