@@ -1,11 +1,11 @@
 # Marr Revisited: 2D-3D Alignment via Surface Normal Prediction
 Created by Aayush Bansal, Bryan Russell, and Abhinav Gupta at CMU and Adobe Research.
 
-# Introduction 
+## Introduction 
 
-This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface normal prediction. In this work, we predict detailed surface normals through the non-linear optimization of sparse hypercolumn features. The idea of sparsely sampling hypercolumn features allowed the non-linear optimization by a multi-layer perceptron. This work is the current state-of-the-art (as of July 2016) on NYUD dataset for both global and local layout. For more details, refer to the text in our paper http://www.cs.cmu.edu/~aayushb/marrRevisited/. 
+This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface normal prediction. In this work, we predict detailed surface normals through the non-linear optimization of sparse hypercolumn features. The idea of sparsely sampling hypercolumn features allowed the non-linear optimization by a multi-layer perceptron. This work is the current state-of-the-art (as of July 2016) on NYUD dataset for both global and local layout. For more details, refer to the text in our paper http://www.cs.cmu.edu/~aayushb/marrRevisited/. Here, we give step-by-step instruction to use our code for training and predicting surface normal maps.
 
-# How to use this code?
+## How to use this code?
 
 1. Installing Caffe Toolbox - We have included the required source codes with the original caffe codes. To use our stuff, one needs to install caffe in the given folder. 
 
@@ -13,10 +13,14 @@ This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface 
 
 3. The required caffe models (VGG-16 model converted to a fully convolutional model, and our best model for surface normal estimation) can be downloaded from <http://www.cs.cmu.edu/~aayushb/marrRevisited/surface_normal_models.tar.gz>. Once you have these models, you are good to use our code for both deployment and training your own model (TYOM). Feel free to contact authors if you have difficulty TYOM.
 
-# LICENSE
+## Using it with NYU-v2 depth dataset? 
+
+## Evaluation Script
+
+## LICENSE
 This code is copyrighted by the authors, CMU, and Adobe, and is for non-commercial research purposes only. Please contact the authors, CMU, or Adobe if you are interested in licensing for commercial purposes.
 
-# CITATION 
+## CITATION 
 Please cite our paper if you use this code for any publishable academic research:
 
 @inproceedings{Bansal16,
