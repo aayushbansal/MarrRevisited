@@ -30,6 +30,7 @@ This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface 
 
 3. The required caffe models (VGG-16 model converted to a fully convolutional model, and our best model for surface normal estimation) can be downloaded from :
    ```make
+   # download the models for estimating surface normal maps or to train your own model.
    cd cachedir
    wget http://www.cs.cmu.edu/~aayushb/marrRevisited/surface_normal_models.tar.gz
    tar -xvzf surface_normal_models.tar.gz
@@ -44,9 +45,10 @@ Specific instructions are given below to use our code for estimating surface nor
 
 ## DEMO 
 
-
+Assuming you are in the "normals/demo" folder, we now give instruction of how to use our code for generating surface normal maps for a random image. 
 
 ## Other than Demo
+
 In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how to use our code with this dataset: 
 
 ### Training a model -
@@ -74,11 +76,13 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
 2. Surface Normal from Kinect - We used the surface normal provided by Ladicky et al. (ECCV 2014) for 1449 images. Those normal maps can be downloaded using: 
 
    ```make
+   # Surface normal maps from kinect data for 1449 images.
    wget https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip
    ```
 
 3. We used the code from Wang et al. (CVPR 2015) for raw video frames as it was computationally too expensive to compute the normals using the approach of Ladicky et al. on all video frames. The codes can be downloaded using
    ```make
+   # Code to extract surface normal maps from kinect using Wang et al. (CVPR 2015)
    wget http://www.cs.cmu.edu/~aayushb/marrRevisited/kinect_normals_code.tar.gz
    ```
 
@@ -95,6 +99,7 @@ Once you have successfully installed the code and downloaded the models, it can 
 The evaluation script is in folder "normals/eval". The path for data might need a change in the scripts. Our results can be downloaded from: 
 
   ```make
+  # The surface normal maps generated using our model.
   wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/nyu_test.zip
   ```
 
