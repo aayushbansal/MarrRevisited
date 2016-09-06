@@ -20,7 +20,7 @@ wget http://www.cs.cmu.edu/~aayushb/marrRevisited/surface_normal_models.tar.gz
 
 ## DEMO 
 
-## Using it with NYU-v2 depth dataset - 
+## Other than Demo
 In this work, we showed evaluation on NYU-v2 depth dataset. Following we describe how to use our code with this dataset: 
 
 ### Training a model -
