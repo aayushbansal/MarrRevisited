@@ -47,14 +47,14 @@ In this work, we showed evaluation on NYU-v2 depth dataset. Following we describ
 
 2. Surface Normal from Kinect - We used the surface normal provided by Ladicky et al. (ECCV 2014) for 1449 images. Those normal maps can be downloaded using: 
 
-```make
- wget https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip
-```
+   ```make
+   wget https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip
+   ```
 
 3. For the raw video frames, we used the code from Wang et al. (CVPR 2015) as it was computationally too expensive to compute the normals using the approach of Ladicky et al. on all video frames. The codes can be downloaded using
-```make
-wget http://www.cs.cmu.edu/~aayushb/marrRevisited/kinect_normals_code.tar.gz
-```
+   ```make
+   wget http://www.cs.cmu.edu/~aayushb/marrRevisited/kinect_normals_code.tar.gz
+   ```
 
    Note that in our work, we ignored the pixels belonging to invalid depth data. Therefore, other than the normal maps and images, one requires a map of valid pixels for each image.
 
@@ -68,9 +68,9 @@ Once you have successfully installed the code and downloaded the models, it can 
 ## Evaluation Script
 The evaluation script is in folder "normals/eval". The path for data might need a change in the scripts. Our results can be downloaded from: 
 
-```make
-wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/nyu_test.zip
-```
+  ```make
+  wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/nyu_test.zip
+  ```
 
 ## Contact 
 Please contact Aayush Bansal in case of any queries or comments about the code.
