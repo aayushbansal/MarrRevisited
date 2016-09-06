@@ -1,7 +1,6 @@
 % demo code to use the surface normal mode --
 
 clc; clear all;
-addpath('./demo/cnn_feat/');
 
 %
 conv_cache = ['./cachedir/demo_results/'];
