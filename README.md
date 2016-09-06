@@ -47,7 +47,7 @@ Specific instructions are given below to use our code for estimating surface nor
 
 
 ## Other than Demo
-In this work, we showed evaluation on NYU-v2 depth dataset. Following we describe how to use our code with this dataset: 
+In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how to use our code with this dataset: 
 
 ### Training a model -
 1. Download the NYU-v2 dataset: 
@@ -65,7 +65,7 @@ In this work, we showed evaluation on NYU-v2 depth dataset. Following we describ
   The train, val, and test set splits can be downloaded using: 
 
   ```make
-  # Raw video frames
+  # train-val-test splits
   wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/NYU_splits.tar.gz
   ```
 
@@ -77,7 +77,7 @@ In this work, we showed evaluation on NYU-v2 depth dataset. Following we describ
    wget https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip
    ```
 
-3. For the raw video frames, we used the code from Wang et al. (CVPR 2015) as it was computationally too expensive to compute the normals using the approach of Ladicky et al. on all video frames. The codes can be downloaded using
+3. We used the code from Wang et al. (CVPR 2015) for raw video frames as it was computationally too expensive to compute the normals using the approach of Ladicky et al. on all video frames. The codes can be downloaded using
    ```make
    wget http://www.cs.cmu.edu/~aayushb/marrRevisited/kinect_normals_code.tar.gz
    ```
