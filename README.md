@@ -14,10 +14,10 @@ This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface 
 3. The required caffe models (VGG-16 model converted to a fully convolutional model, and our best model for surface normal estimation) can be downloaded from <http://www.cs.cmu.edu/~aayushb/marrRevisited/surface_normal_models.tar.gz>. Once you have these models, you are good to use our code for both deployment and training your own model (TYOM). Feel free to contact authors if you have difficulty TYOM.
 
 ## Using it with NYU-v2 depth dataset - 
-In this work, we showed evaluation on NYU-v2 depth dataset. Following we describe how to use our dataset with this dataset: 
+In this work, we showed evaluation on NYU-v2 depth dataset. Following we describe how to use our code with this dataset: 
 
 ### Training a model -
-1. Download the file <http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat> for 1449 labeled examples, and <http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_raw.zip> for raw video frames. Please cite their work if you use this dataset. The train, val, and test set splits are available here at <http://www.cs.cmu.edu/~aayushb/marrRevisited/data/NYU_splits.tar.gz>.
+1. Download the file <http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat> for 1449 labeled examples, and <http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_raw.zip> for raw video frames. Please cite their work if you use this dataset. The train, val, and test set splits are available here at <http://www.cs.cmu.edu/~aayushb/marrRevisited/data/NYU_splits.tar.gz>. Note that Silberman et al. (ECCV 2012) contained the train-test split. Gupta et al. (ECCV 2014) provided an extra train-val-test split. In our experiments, we use these splits. 
 
 2. Surface Normal from Kinect - We used the surface normal provided by Ladicky et al. (ECCV 2014) for 1449 images. Those normal maps are available here at <https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip>. For the raw video frames, we used the code from Wang et al. (CVPR 2015) as it was computationally too expensive to compute the normals using the approach of Ladicky et al. on all video frames. Note that in our work, we ignored the pixels belonging to invalid depth data. Therefore, other than the normal maps and images, one requires a map of valid pixels for each image.
 
