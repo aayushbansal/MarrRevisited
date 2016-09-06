@@ -92,7 +92,7 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
   cd ..
   ```
 
-  Note that Silberman et al. (ECCV 2012) contained the train-test split. Gupta et al. (ECCV 2014) provided an extra train-val-test split. In our experiments, we use the one provided here.
+  Note that Silberman et al. (ECCV 2012) contained the train-test split. Gupta et al. (ECCV 2014) provided an extra train-val split from training split. We use the same splits (also provided above).
 
 2. Surface Normal from Kinect - We used the surface normal provided by Ladicky et al. (ECCV 2014) for 1449 images. Those normal maps can be downloaded using: 
 
