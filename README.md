@@ -21,7 +21,7 @@ In this work, we showed evaluation on NYU-v2 depth dataset. Following we describ
 
 2. Surface Normal from Kinect - We used the surface normal provided by Ladicky et al. (ECCV 2014) for 1449 images. Those normal maps are available here at <https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip>. For the raw video frames, we used the code from Wang et al. (CVPR 2015) as it was computationally too expensive to compute the normals using the approach of Ladicky et al. on all video frames. Note that in our work, we ignored the pixels belonging to invalid depth data. Therefore, other than the normal maps and images, one requires a map of valid pixels for each image.
 
-3. Once you have corresponding training images, normal maps, and valid depth data information (provided that you have successfully installed the code and downloaded the models) --  modify the paths mentioned in scripts run.sh and train.prototxt in the folder "normals/net/conv" to refer to data location. After these changes, simply running run.sh  to train our model.
+3. Once you have corresponding training images, normal maps, and valid depth data information (provided that you have successfully installed the code and downloaded the models) --  modify the paths mentioned in scripts run.sh and train.prototxt in the folder "normals/net/conv" to refer to data location. After these changes, simply use run.sh  to train our model.
 
 Point to Note - As mentioned in our paper, we resized the images to 224x224. Similarly we resized the normals to 224x224 and then normalized them. The valid pixel depth map is also resized to same value. To provide zero padding, we padded the images by 100 pixels. 
 
