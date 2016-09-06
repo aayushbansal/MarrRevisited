@@ -12,11 +12,18 @@ This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface 
       http://caffe.berkeleyvision.org/installation.html
    ```
 
-2. The details corresponding to surface normal estimation is present in the folder "normals"
+2. The details corresponding to surface normal estimation is present in the folder "normals".
    ```make
 	cd normals
    ```
-
+   
+   After successfully installing caffe, make a soft-link of caffe in toolbox folder:
+   ```make
+	cd toolbox/
+	ln -s ../../caffe ./
+	cd ..
+   ```
+  
    The prototxt files for training the model and predicting the surface normal map from a single 2D image are available in "net" folder:
    ```make
 	 ls net
@@ -38,14 +45,20 @@ This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface 
    ```
 
 4. Demo code to generate surface normal maps is available in "demo"
-   ```make
-      cd demo
-   ```
+
 Specific instructions are given below to use our code for estimating surface normal maps from our trained model, and how to train a new model using NYU-v2 depth dataset.
 
 ## DEMO 
 
-Assuming you are in the "normals/demo" folder, we now give instruction of how to use our code for generating surface normal maps for a random image. 
+Assuming you are in the "normals/" folder, we now give instruction of how to use our code for generating surface normal maps for two random images from NYU depth dataset.
+```make
+   matlab
+   demo_code;
+```
+The results can be seen here :
+```make
+   ls ./cachedir/demo_results/
+```
 
 ## Other than Demo
 
@@ -56,19 +69,27 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
 
   ```make
   # 1449 labeled examples
+  mkdir dataset
+  cd dataset
   wget http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat
+  cd ..
   ```
 
   ```make
   # Raw video frames
+  cd dataset
   wget http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_raw.zip
+  cd ..
   ```
 
   The train, val, and test set splits can be downloaded using: 
 
   ```make
   # train-val-test splits
+  cd dataset
   wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/NYU_splits.tar.gz
+  tar -xvzf NYU_splits.tar.gz
+  cd ..
   ```
 
   Note that Silberman et al. (ECCV 2012) contained the train-test split. Gupta et al. (ECCV 2014) provided an extra train-val-test split. In our experiments, we use the one provided here.
@@ -77,23 +98,37 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
 
    ```make
    # Surface normal maps from kinect data for 1449 images.
+   cd dataset
    wget https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip
+   unzip nyu_normals_gt.zip
+   cd ..
    ```
 
 3. We used the code from Wang et al. (CVPR 2015) for raw video frames as it was computationally too expensive to compute the normals using the approach of Ladicky et al. on all video frames. The codes can be downloaded using
    ```make
    # Code to extract surface normal maps from kinect using Wang et al. (CVPR 2015)
-   wget http://www.cs.cmu.edu/~aayushb/marrRevisited/kinect_normals_code.tar.gz
+   # Details to use this code are given in the folder
+   cd toolbox/
+   wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/kinect_normals_code.tar.gz
+   tar -xvf kinect_normals_code.tar.gz
+   cd ..
+   # For more details about this code, see the script getNormals.m
+   # All the required data is present in this folder
    ```
 
    Note that in our work, we ignored the pixels belonging to invalid depth data. Therefore, other than the normal maps and images, one requires a map of valid pixels for each image.
 
-4. Once you have corresponding training images, normal maps, and valid depth data information (provided that you have successfully installed the code and downloaded the models) --  modify the paths mentioned in scripts run.sh and train.prototxt in the folder "normals/net/conv" to refer to data location. After these changes, simply use run.sh  to train our model.
+4. Data Preparation - Using the dataset, one can prepare the required data to train a new model for surface normal estimation. As mentioned in our paper, we resized the images to 224x224. Similarly we resized the normals to 224x224 and then normalized them. The valid pixel depth map is also resized to same value. To provide zero padding, we padded the images by 100 pixels.
 
-Point to Note - As mentioned in our paper, we resized the images to 224x224. Similarly we resized the normals to 224x224 and then normalized them. The valid pixel depth map is also resized to same value. To provide zero padding, we padded the images by 100 pixels. 
+5. Once you have corresponding training images, normal maps, and valid depth data information (provided that you have successfully installed the code and downloaded the models) --  modify the paths mentioned in scripts run.sh and train.prototxt in the folder "normals/net/conv" to refer to data location. After these changes, simply use run.sh  to train our model.
+   ```make
+   # Training a new model after making required modifications
+   cd net/conv
+   ./run.sh
+   ```
 
 ### Using our trained model 
-Once you have successfully installed the code and downloaded the models, it can be easily used to compute normal maps using the deploy file.
+Once you have successfully installed the code and downloaded the models, it can be easily used to compute normal maps using the deploy file. See the demo code in demo/.  
 
 ## Evaluation Script
 The evaluation script is in folder "normals/eval". The path for data might need a change in the scripts. Our results can be downloaded from: 
