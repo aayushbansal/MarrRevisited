@@ -125,10 +125,11 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
    # Training a new model after making required modifications
    cd net/conv
    ./run.sh
+   # We ran the network for 60K iterations. This is roughly 1 epoch of training data.
    ```
 
-### Using our trained model 
-Once you have successfully installed the code and downloaded the models, it can be easily used to compute normal maps using the deploy file. See the demo code in demo/.  
+### Using the trained model 
+Once you have successfully trained your model, it can be easily used to compute normal maps using the deploy file. See the demo code in demo/.
 
 ## Evaluation Script
 The evaluation script is in folder "normals/eval". The path for data might need a change in the scripts. Our results can be downloaded from: 
