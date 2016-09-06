@@ -17,14 +17,26 @@ This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface 
 In this work, we showed evaluation on NYU-v2 depth dataset. Following we describe how to use our code with this dataset: 
 
 ### Training a model -
-1. Download the file for 1449 labeled examples: 
+1. Download the NYU-v2 dataset: 
 
   ```make
   # 1449 labeled examples
   wget http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat
   ```
 
- and <http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_raw.zip> for raw video frames. Please cite their work if you use this dataset. The train, val, and test set splits are available here at <http://www.cs.cmu.edu/~aayushb/marrRevisited/data/NYU_splits.tar.gz>. Note that Silberman et al. (ECCV 2012) contained the train-test split. Gupta et al. (ECCV 2014) provided an extra train-val-test split. In our experiments, we use these splits. 
+  ```make
+  # Raw video frames
+  wget http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_raw.zip
+  ```
+
+  The train, val, and test set splits can be downloaded using: 
+
+  ```make
+  # Raw video frames
+  wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/NYU_splits.tar.gz
+  ```
+
+  Note that Silberman et al. (ECCV 2012) contained the train-test split. Gupta et al. (ECCV 2014) provided an extra train-val-test split. In our experiments, we use the one provided here.
 
 2. Surface Normal from Kinect - We used the surface normal provided by Ladicky et al. (ECCV 2014) for 1449 images. Those normal maps are available here at <https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip>. For the raw video frames, we used the code from Wang et al. (CVPR 2015) as it was computationally too expensive to compute the normals using the approach of Ladicky et al. on all video frames. Note that in our work, we ignored the pixels belonging to invalid depth data. Therefore, other than the normal maps and images, one requires a map of valid pixels for each image.
 
