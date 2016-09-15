@@ -16,7 +16,7 @@ Here, we give step-by-step instruction to use our code for training models and e
 
 1. Installing Caffe Toolbox - We have included a pointer to Caffe as a submodule.  You will need to pull it using the following command if you want to use it individually :
    ```make
-      git clone https://github.com/aayushbansal/caffe.gitl
+      git clone https://github.com/aayushbansal/caffe.git
    ```
 
     To install Caffe, please follow the instructions on their [project page](http://caffe.berkeleyvision.org/).
