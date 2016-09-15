@@ -103,9 +103,9 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
   cd ..
   ```
 
-  Note that Silberman et al. (ECCV 2012) contained the train-test split. Gupta et al. (ECCV 2014) provided an extra train-val split from training split. We use the same splits (also provided above).
+  Note that [Silberman et al. (ECCV 2012)](http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html) contained the train-test split. [Gupta et al. (ECCV 2014)](http://people.eecs.berkeley.edu/~sgupta/pdf/rcnn-depth.pdf) provided an extra train-val split from training split. We use the same splits (also provided above).
 
-2. Surface Normal from Kinect - We used the surface normal provided by Ladicky et al. (ECCV 2014) for 1449 images. Those normal maps can be downloaded using: 
+2. Surface Normal from Kinect - We used the surface normal provided by [Ladicky et al. (ECCV 2014)](https://www.inf.ethz.ch/personal/ladickyl/normals_eccv14.pdf) for 1449 images. Those normal maps can be downloaded using: 
 
    ```make
    # Surface normal maps from kinect data for 1449 images.
@@ -115,7 +115,7 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
    cd ..
    ```
 
-3. We used the code from Wang et al. (CVPR 2015) for raw video frames as it was computationally too expensive to compute the normals using the approach of Ladicky et al. on all video frames. The codes can be downloaded using
+3. We used the code from [Wang et al. (CVPR 2015)](http://www.cs.cmu.edu/~xiaolonw/deep3d.html) for raw video frames as it was computationally too expensive to compute the normals using the approach of [Ladicky et al.](https://www.inf.ethz.ch/personal/ladickyl/normals_eccv14.pdf) on all video frames. The codes can be downloaded using
    ```make
    # Code to extract surface normal maps from kinect using Wang et al. (CVPR 2015)
    # Details to use this code are given in the folder
@@ -143,7 +143,7 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
 Once you have successfully trained your model, it can be easily used to compute normal maps using the deploy file. See the demo code in demo/.
 
 ## Contact 
-Please contact Aayush Bansal in case of any queries or comments about the code.
+Please contact [Aayush Bansal](http://www.cs.cmu.edu/~aayushb) in case of any query or comment about the code.
 
 ## LICENSE
 This code is copyrighted by the authors, CMU, and Adobe, and is for non-commercial research purposes only. Please contact the authors, CMU, or Adobe if you are interested in licensing for commercial purposes.
