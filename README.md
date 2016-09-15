@@ -1,27 +1,29 @@
 # Marr Revisited: 2D-3D Alignment via Surface Normal Prediction
-Created by Aayush Bansal, Bryan Russell, and Abhinav Gupta at CMU and Adobe Research.
+Created by [Aayush Bansal](http://www.cs.cmu.edu/~aayushb), [Bryan Russell](http://www.bryanrussell.org/), and [Abhinav Gupta](http://www.cs.cmu.edu/~abhinavg) at CMU and Adobe Research.
 
 ## Introduction 
 
-This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface normal prediction. In this work, we predict detailed surface normals through the non-linear optimization of sparse hypercolumn features. The idea of sparsely sampling hypercolumn features allowed the non-linear optimization by a multi-layer perceptron. This work is the current state-of-the-art (as of July 2016) on NYUD dataset for both global and local layout. For more details, refer to the text in our paper http://www.cs.cmu.edu/~aayushb/marrRevisited/. Here, we give step-by-step instruction to use our code for training models and estimating surface normal maps. We will release the codes for pose estimation soon.
+This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface normal prediction. In this work, we predict detailed surface normals through the non-linear optimization of sparse hypercolumn features. The idea of sparsely sampling hypercolumn features allowed the non-linear optimization by a multi-layer perceptron. This work is the current state-of-the-art (as of July 2016) on NYUD dataset for both global and local layout. For more details, refer to the text in our [paper](http://www.cs.cmu.edu/~aayushb/marrRevisited/). 
 
-## How to use this code?
+The codes can be downloaded using the following command:
+```make 
+        git clone https://github.com/aayushbansal/MarrRevisited.git
+```
 
-1. Installing Caffe Toolbox - We have included the required source codes with the original caffe codes. To use our stuff, one needs to install caffe in the given folder. Please follow the instructions provided at
+Here, we give step-by-step instruction to use our code for training models and estimating surface normal maps. We will release the codes for pose estimation soon.
+
+## Installing the Code
+
+1. Installing Caffe Toolbox - We have included a pointer to Caffe as a submodule.  You will need to pull it using the following command if you want to use it individually :
    ```make
-      http://caffe.berkeleyvision.org/installation.html
+      git clone https://github.com/aayushbansal/caffe.gitl
    ```
+
+    To install Caffe, please follow the instructions on their [project page](http://caffe.berkeleyvision.org/).
 
 2. The details corresponding to surface normal estimation is present in the folder "normals".
    ```make
 	cd normals
-   ```
-   
-   After successfully installing caffe, make a soft-link of caffe in toolbox folder:
-   ```make
-	cd toolbox/
-	ln -s ../../caffe ./
-	cd ..
    ```
   
    The prototxt files for training the model and predicting the surface normal map from a single 2D image are available in "net" folder:
@@ -60,7 +62,16 @@ The results can be seen here :
    ls ./cachedir/demo_results/
 ```
 
-## Other than Demo
+## Evaluation Script
+The evaluation script is in folder "normals/eval". The path for data might need a change in the scripts. Our results can be downloaded from:
+
+  ```make
+  # The surface normal maps generated using our model.
+  wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/nyu_test.zip
+  ```
+
+
+## Training your own model for surface normal prediction on NYUv2
 
 In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how to use our code with this dataset: 
 
@@ -130,14 +141,6 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
 
 ### Using the trained model 
 Once you have successfully trained your model, it can be easily used to compute normal maps using the deploy file. See the demo code in demo/.
-
-## Evaluation Script
-The evaluation script is in folder "normals/eval". The path for data might need a change in the scripts. Our results can be downloaded from: 
-
-  ```make
-  # The surface normal maps generated using our model.
-  wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/nyu_test.zip
-  ```
 
 ## Contact 
 Please contact Aayush Bansal in case of any queries or comments about the code.
