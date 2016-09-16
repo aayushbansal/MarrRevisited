@@ -31,14 +31,10 @@ Here, we give step-by-step instruction to use our code for training models and e
    ```make
 	 ls net
    ```
-   There are two folders - a. conv; b. deconv. In our paper, we used the ones in 'a. conv'. The 'b. deconv' folder is provided if there are interest in using the code via a deconvolution layer.  
+   There are two folders - a. conv; b. deconv. In our paper, we used the ones in 'a. conv'.
 
-   The evaluation script is available in "eval" folder:
-   ```make
-	ls eval
-   ```
 
-3. The required caffe models (VGG-16 model converted to a fully convolutional model, and our best model for surface normal estimation) can be downloaded from :
+   The required caffe models (VGG-16 model converted to a fully convolutional model, and our best model for surface normal estimation) can be downloaded from :
    ```make
    # download the models for estimating surface normal maps or to train your own model.
    cd cachedir
@@ -47,15 +43,15 @@ Here, we give step-by-step instruction to use our code for training models and e
    cd ..
    ```
 
-4. Demo code to generate surface normal maps is available in "demo"
+3. Demo code to generate surface normal maps is available in "demo"
 
 Specific instructions are given below to use our code for estimating surface normal maps from our trained model, and how to train a new model using NYU-v2 depth dataset.
 
-## DEMO 
+## DEMO
 
-Assuming you are in the "normals/" folder, we now give instruction of how to use our code for generating surface normal maps for two random images from NYU depth dataset.
+You can run the demo code inside Matlab (assuming you are in the "normals/" directory):
+
 ```make
-   matlab
    demo_code;
 ```
 The results can be seen here :
@@ -64,7 +60,7 @@ The results can be seen here :
 ```
 
 ## Evaluation Script
-The evaluation script is in folder "normals/eval". The path for data might need a change in the scripts. Our results can be downloaded from:
+The evaluation script is in "normals/eval" directory. The path for data might need a change in the scripts. Our results can be downloaded from:
 
   ```make
   # The surface normal maps generated using our model.
