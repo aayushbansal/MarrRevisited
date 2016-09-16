@@ -22,12 +22,12 @@ Here, we give step-by-step instruction to use our code for training models and e
 
     To install Caffe, please follow the instructions on their [project page](http://caffe.berkeleyvision.org/).
 
-2. The details corresponding to surface normal estimation is present in the folder "normals".
+2. The details corresponding to surface normal estimation is present in the "normals/" directory.
    ```make
 	cd normals
    ```
   
-   The prototxt files for training the model and predicting the surface normal map from a single 2D image are available in "net" folder:
+   The prototxt files for training the model and predicting the surface normal map from a single 2D image are available in "normals/net" directory:
    ```make
 	 ls net
    ```
@@ -43,13 +43,11 @@ Here, we give step-by-step instruction to use our code for training models and e
    cd ..
    ```
 
-3. Demo code to generate surface normal maps is available in "demo"
-
 Specific instructions are given below to use our code for estimating surface normal maps from our trained model, and how to train a new model using NYU-v2 depth dataset.
 
 ## DEMO
 
-You can run the demo code inside Matlab (assuming you are in the "normals/" directory):
+You can run the demo code inside MATLAB (assuming you are in the "normals/" directory):
 
 ```make
    demo_code;
@@ -60,11 +58,20 @@ The results can be seen here :
 ```
 
 ## Evaluation Script
-The evaluation script is in "normals/eval" directory. The path for data might need a change in the scripts. Our results can be downloaded from:
+The evaluation script is in "normals/eval" directory. Our results can be downloaded using following (given you are in "normals/" directory):
 
   ```make
   # The surface normal maps generated using our model.
+  cd cachedir/
   wget http://www.cs.cmu.edu/~aayushb/marrRevisited/data/nyu_test.zip
+  unzip nyu_test.zip
+  mv results best_model  
+  cd ..
+  ```
+ 
+  The other thing needed for evaluation are the surface normal maps from Kinect data on test set. Please see the section below to download the data. Once you have the required data, run following inside MATLAB:
+  ```make
+    eval_sn
   ```
 
 
