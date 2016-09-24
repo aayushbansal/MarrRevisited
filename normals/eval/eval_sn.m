@@ -4,6 +4,8 @@
 % All rights reserved.[see LICENSE for details]
 % -------------------------------------------------------------------------- %
 
+% Written by Aayush Bansal. Please contact ab.nsit@gmail.com
+
 % use the network to predict the values of nx, ny, and nz.
 % function comp_nxyz(PREDN, NET_NAME, MODEL_ITER)
 clc; clear all;

@@ -15,7 +15,7 @@ Here, we give step-by-step instruction to use our code for training models and e
 
 ## Installing the Code
 
-1. Installing Caffe Toolbox - We have included a pointer to Caffe as a submodule.  You will need to pull it using the following command if you want to use it individually :
+1. Installing Caffe Toolbox - We have included a pointer to Caffe as a submodule.  You will need to pull it using the following command:
    ```make
       git clone https://github.com/aayushbansal/caffe.git
    ```

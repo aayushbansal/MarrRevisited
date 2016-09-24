@@ -4,6 +4,7 @@
 % All rights reserved.[see LICENSE for details]
 % -------------------------------------------------------------------------- %
 
+% Written by Aayush Bansal. Please contact ab.nsit@gmail.com
 % demo code to use the surface normal mode --
 clc; clear all;
 
