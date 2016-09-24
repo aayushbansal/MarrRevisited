@@ -1,5 +1,10 @@
-% demo code to use the surface normal mode --
+% --------------------------------------------------------------------------- %
+% MarrRevisited - Surface Normal Estimation
+% Copyright (c) 2016 Adobe Systems Incorporated and Carnegie Mellon University. 
+% All rights reserved.[see LICENSE for details]
+% -------------------------------------------------------------------------- %
 
+% demo code to use the surface normal mode --
 clc; clear all;
 
 %

@@ -1,3 +1,9 @@
+% --------------------------------------------------------------------------- %
+% MarrRevisited - Surface Normal Estimation
+% Copyright (c) 2016 Adobe Systems Incorporated and Carnegie Mellon University. 
+% All rights reserved.[see LICENSE for details]
+% -------------------------------------------------------------------------- %
+
 % use the network to predict the values of nx, ny, and nz.
 % function comp_nxyz(PREDN, NET_NAME, MODEL_ITER)
 clc; clear all;
