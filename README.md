@@ -168,10 +168,10 @@ Please cite our paper if you use this code for any publishable academic research
 More details about our network architecture are available in [PixelNet](http://www.cs.cmu.edu/~aayushb/pixelNet/) paper:
 
 ```make
-@inproceedings{BansalChen16,
+@article{BansalChen16,
   title={PixelNet: {T}owards a {G}eneral {P}ixel-level {A}rchitecture},
   author={Bansal, Aayush and Chen, Xinlei, and  Russell, Bryan and Gupta, Abhinav and Ramanan, Deva},
-  booktitle={arXiv},
+  Journal={arXiv preprint arXiv:1609.06694},
   year={2016}
 }
 ```
