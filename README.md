@@ -11,7 +11,7 @@ git clone https://github.com/aayushbansal/MarrRevisited.git
 cd MarrRevisited
 ```
 
-Here, we give step-by-step instruction to use our code for training models and estimating surface normal maps. We will release the codes for pose estimation soon.
+Here, we give step-by-step instruction to use our code for training models and estimating surface normal maps. We will release the codes for pose estimation soon, and optimized version of surface normals sometime soon.
 
 ## Installing the Code
 
