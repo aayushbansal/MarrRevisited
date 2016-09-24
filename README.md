@@ -1,6 +1,8 @@
 # Marr Revisited: 2D-3D Alignment via Surface Normal Prediction
 Created by [Aayush Bansal](http://www.cs.cmu.edu/~aayushb), [Bryan Russell](http://www.bryanrussell.org/), and [Abhinav Gupta](http://www.cs.cmu.edu/~abhinavg) at CMU and Adobe Research.
 
+Acknowledgements: a huge thanks to [Xinlei Chen](http://www.cs.cmu.edu/~xinleic) for all discussions and help.
+
 ## Introduction 
 
 This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface normal prediction. In this work, we predict detailed surface normals through the non-linear optimization of sparse hypercolumn features. The idea of sparsely sampling hypercolumn features allowed the non-linear optimization by a multi-layer perceptron. This work is the current state-of-the-art (as of July 2016) on NYUD dataset for both global and local layout. For more details, refer to the text in our [paper](http://www.cs.cmu.edu/~aayushb/marrRevisited/). 
