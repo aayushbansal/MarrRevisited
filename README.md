@@ -9,7 +9,7 @@ This work is a part of our CVPR-2016 paper on 2D-3D model alignment via surface 
 
 The codes can be downloaded using the following command:
 ```make 
-git clone https://github.com/aayushbansal/MarrRevisited.git
+git clone --recursive https://github.com/aayushbansal/MarrRevisited.git
 cd MarrRevisited
 ```
 
@@ -17,7 +17,7 @@ Here, we give step-by-step instruction to use our code for training models and e
 
 ## Installing the Code
 
-1. Installing Caffe Toolbox - We have included a pointer to Caffe as a submodule. Our required layers are available within this submodule. You will need to pull it using the following command:
+1. Installing Caffe Toolbox - We have included a pointer to Caffe as a submodule. Our required layers are available within this submodule. You will need to pull it using the following command (in case you want to use it for some other project):
    ```make
       git clone https://github.com/aayushbansal/caffe.git
    ```
