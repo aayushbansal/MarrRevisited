@@ -21,6 +21,7 @@ DEPLOY_FILE_PATH = ['./net/conv/'];
 deploy_file  = [DEPLOY_FILE_PATH, 'deploy.prototxt']; 
 
 % set the gpu --
+% if not using GPU, set it to CPU mode.
 gpu_id = 0;
 caffe.reset_all;
 caffe.set_device(gpu_id);
