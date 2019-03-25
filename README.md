@@ -116,10 +116,23 @@ In this work, we showed evaluation on NYU-v2 depth dataset. We now describe how 
    ```make
    # Surface normal maps from kinect data for 1449 images.
    cd dataset
-   wget https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip
-   unzip nyu_normals_gt.zip
+   # Original source (Unreliable download connection as of March 2019).
+   # wget https://www.inf.ethz.ch/personal/ladickyl/nyu_normals_gt.zip
+   # unzip nyu_normals_gt.zip
+
+   # A clone with reliable download (as of March 2019).
+   wget https://s3.eu-west-2.amazonaws.com/kaykanloo-mscproject/Ladicky.tar.gz
+   tar xvzf Ladicky.tar.gz
    cd ..
    ```
+
+   The evaluation script however requires the groud truth surface normals in .mat format. These can be downloaded.
+   ```bash
+   wget https://www.dropbox.com/s/s85qfjq6xq9n63x/marr-revisited.zip
+   unzip marr-revisited.zip
+   ```
+
+   The resulting .mat files need to be moved to `normals/dataset/NYU/GT_Normals/test`.
 
 3. We used the code from [Wang et al. (CVPR 2015)](http://www.cs.cmu.edu/~xiaolonw/deep3d.html) for raw video frames as it was computationally too expensive to compute the normals using the approach of [Ladicky et al.](https://www.inf.ethz.ch/personal/ladickyl/normals_eccv14.pdf) on all video frames. The codes can be downloaded using
    ```make
